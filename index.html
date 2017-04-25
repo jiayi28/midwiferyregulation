@@ -13,7 +13,7 @@
 
                 <!-- THESE ARE THE JAVASCRIPT FILES I ADDED -->
 				<script src="http://bloximages.newyork1.vip.townnews.com/columbiamissourian.com/content/tncms/live/components/jquery/resources/scripts/jquery.min.js?_dc=1423174924"></script>
- 				<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery-1.9.1.js"></script>
+ 				 <script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery-1.9.1.js"></script>
 				<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery-ui-1.10.2.custom.js"></script>
 				<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery.ui.tooltip.js"></script>
 				<script type="text/javascript" src="http://www.columbiamissourian.com/app/projects/Project_files/js/jquery.cycle.all.js"></script>
@@ -27,16 +27,14 @@
 		<!-- END -->
 
 
-
 </head>
-
 
 
 <body id="site" class="base">
 
 	<div id="main" style="max-width: 930px; margin: auto;">
 
-<!-- ////////////////////FILL OUT BELOW FOR HEADLINE AND YOUR INFO ////////////////////// -->
+<!-- ////////////////////FILL OUT BELOW FOR HEADLINE AND YOUR INFO ////////////////////////////// -->
 		<div class="centered">
 				<h1 class='domine'>Midwifery regulations in Missouri</h1>
 				<p class="body domine">Text here to explain the image below. Text here to explain the image below.Text here to explain the image below.Text here to explaText here to explain the image below. Text here to explain the image below.Text here to explain the image below.Text here to explaiin the image below.Text here to explain the image below.</p>
@@ -50,13 +48,105 @@
 
 		<!-- /////////////////////// BEGIN SINGLE LAYER///////////////////////////-->
 
-		<!-- SIMPLE IMAGE -->
+		<!-- SIMPLE IMAGE WITH ROLLOVER NUMBERS-->
 		<div class="single">
 			<div class="graphic">
 				<h4>Headline for image below</h4>
 					<p class="body">Text here to explain the image below.Text here to explain the image below.Text here to explain the image below.</p>
-					<div><img src="images/imagename.jpg"></div>
+				<!--  ADD ROLLOVER DOTS -->
+				<!--  Change the left and top coordinates to move the numbers around. Feel free to change color.-->
 
+					<div class="dots">
+						<div id="parent" style="left: 54%; top: 20%;">
+							<div class="dot" style="background-color: #DF7527;" title="" >1</div>
+							<div id="popup">
+								Text goes here and here for this block. ext goes here and here for this block. Text goes here and here for this block. ext goes here and here for this block.
+								<div style="padding-top: 3%">
+									<!--  <img src="images/sampleimage.jpg"> -->
+								</div>
+							</div>
+						</div>
+
+						<div id="parent" style="left: 75%; top: 29%;">
+							<div class="dot" style="background-color: #DF7527;" title="" >2</div>
+							<div id="popup">
+								Text goes here and here for this block. ext goes here and here for this block. Text goes here and here for this block. ext goes here and here for this block.
+								<div style="padding-top: 3%">
+									<img src="images/sampleimage.jpg">
+								</div>
+							</div>
+						</div>
+
+						<div id="parent" style="left: 42%; top: 50%;">
+							<div class="dot" style="background-color: #DF7527;" title="" >3</div>
+							<div id="popup">
+								Text goes here and here for this block. ext goes here and here for this block. Text goes here and here for this block. ext goes here and here for this block.
+								<div style="padding-top: 3%">
+									<!--  <img src="images/sampleimage.jpg"> -->
+								</div>
+							</div>
+						</div>
+
+						<div id="parent" style="left: 50%; top: 45%;">
+							<div class="dot" style="background-color: #DF7527;" title="" >4</div>
+							<div id="popup">
+								Text goes here and here for this block. ext goes here and here for this block. Text goes here and here for this block. ext goes here and here for this block.
+								<div style="padding-top: 3%">
+									<img src="images/sampleimage.jpg">
+								</div>
+							</div>
+						</div>
+
+							<div><img src="images/brain.jpg"></div> <!--  Important: background needs to be inside of div.-->
+					</div>
+
+
+					<script>
+
+
+							$('.graphic').tooltip({
+                                items: ".dot",
+                                track: true});
+
+
+			                var e = document.getElementById('parent');
+			                e.onmouseover = function() {
+			                  document.getElementById('popup').style.display = 'block';
+			                }
+			                e.onmouseout = function() {
+			                  document.getElementById('popup').style.display = 'none';
+			                }
+
+					</script>
+			</div>
+		</div>
+		<!-- END SIMPLE IMAGE WITH ROLLOVER NUMBERS-->
+
+		<!-- /////////////////////// END SINGLE LAYER///////////////////////////-->
+
+
+		<!-- /////////////////////// BEGIN SINGLE LAYER///////////////////////////-->
+
+		<!-- CHART EXAMPLE-->
+		<div class="single">
+			<div class="graphic">
+				<h4>Headline for map below</h4>
+				<p class="body">Text here to explain the image below.Text here to explain the image below.Text here to explain the image below.</p>
+				<!-- NOTE: YOU NEED TO ADD HTTP: TO THE FRONT OF THE // IN THE URL OF THE IFRAME -->
+				<div><iframe class="highcharts-iframe" src="http://cloud.highcharts.com/embed/ujokut" style="border: 0; width: 100%; height: 450px;"></iframe></div>
+			</div>
+		</div>
+		<!-- END SIMPLE IMAGE -->
+
+		<!-- /////////////////////// END SINGLE LAYER///////////////////////////-->
+
+		<!-- TIMELINE EXAMPLE-->
+		<div class="single">
+			<div class="graphic">
+				<h4>Headline for map below</h4>
+				<p class="body">Text here to explain the image below.Text here to explain the image below.Text here to explain the image below.</p>
+				<!-- NOTE: YOU NEED TO ADD HTTP: TO THE FRONT OF THE // IN THE URL OF THE IFRAME -->
+				<div><iframe src='http://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1xbNU5FegafIe6RhL1QlhSrcgikjYFezffRktjtcbDeo&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' frameborder='0'></iframe></div>
 			</div>
 		</div>
 		<!-- END SIMPLE IMAGE -->
@@ -64,7 +154,23 @@
 		<!-- /////////////////////// END SINGLE LAYER///////////////////////////-->
 
 
+		<!-- /////////////////////// BEGIN SINGLE LAYER///////////////////////////-->
 
+		<!-- CARTODB MAP EXAMPLE -->
+		<div class="single">
+			<div class="graphic">
+				<div class='text'>
+                    <h4>Headline for chlorpleth map below</h4>
+				    <p class="body">Text here to explain the image below. Text here to explain the image below.Text here to explain the image below.</p>
+                </div>
+				<div>
+				<iframe width="960" height="520" frameborder="0" zoom="3" src="https://davidreed.carto.com/viz/0a026c92-762d-11e6-87dc-0e3ebc282e83/embed_map?zoom=2.5&center_lat=10&center_lon=10" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- END CARTODB MAP -->
+
+		<!-- /////////////////////// END SINGLE LAYER ///////////////////////////-->
 
 
 		<!-- /////////////////////// BEGIN TWO-GRAPHIC LAYER ///////////////////////////-->
@@ -73,7 +179,7 @@
 			<div class="graphic">
 				<h4>Headline for map below</h4>
 				<p class="body">Text here to explain the image below.Text here to explain the image below.Text here to explain the image below.</p>
-				<div><img src="images/imagename.jpg"></div>
+				<div><iframe class="highcharts-iframe" src="http://cloud.highcharts.com/embed/ujokut" style="border: 0; width: 100%; height: 450px;"></iframe></div>
 			</div>
 		</div>
 			<!-- SECOND GRAPHIC:-->
@@ -81,7 +187,45 @@
 			<div class="graphic">
 				<h4>Headline for map below</h4>
 				<p class="body">Text here to explain the image below.Text here to explain the image below.Text here to explain the image below.</p>
-				<div><img src="images/imagename.jpg"></div>
+
+			<!-- /////////// EXAMPLE LEAFLET MAP ////////////////-->
+					<!--First, make the container-->
+				<div id="mapid" style="height: 380px;"></div>
+					<!-- Then put the map code between the script tags-->
+
+				<script>
+
+					var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+					L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+						maxZoom: 18,
+						attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+							'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+							'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+						id: 'mapbox.streets'
+					}).addTo(mymap);
+
+					L.marker([51.5, -0.09]).addTo(mymap);
+
+					L.circle([51.508, -0.11], {
+						color: 'red',
+						fillColor: '#f03',
+						fillOpacity: 0.5,
+						radius: 500
+					}).addTo(mymap);
+
+					L.polygon([
+						[51.509, -0.08],
+						[51.503, -0.06],
+						[51.51, -0.047]
+					]).addTo(mymap);
+
+
+				</script>
+
+
+				<!-- ////////////////////// END EXAMPLE MAP ///////////////////////// -->
+
 			</div>
 		</div>
 		<div class="clear"></div>
@@ -89,7 +233,7 @@
 
 
 		<!-- /////////////////////// BEGIN THREE-GRAPHIC LAYER///////////////////////////-->
-			<!-- FIRST GRAPHIC:-->
+
 		<div class="triple">
 			<div class="graphic">
 				<h4>Headline for map below</h4>
@@ -97,7 +241,7 @@
 				<div><img src="images/imagename.jpg"></div>
 			</div>
 		</div>
-			<!-- SECOND GRAPHIC:-->
+
 		<div class="triple">
 			<div class="graphic">
 				<h4>Headline for map below</h4>
@@ -105,7 +249,7 @@
 				<div><img src="images/imagename.jpg"></div>
 			</div>
 		</div>
-			<!-- THIRD GRAPHIC:-->
+
 		<div class="triple">
 			<div class="graphic">
 				<h4>Headline for map below</h4>
@@ -119,10 +263,93 @@
 
 
 
+		<!-- /////////////////////// BEGIN SINGLE LAYER///////////////////////////-->
+
+		<div class="single">
+		<!-- 1-2-3 PANEL GRAPHIC -->
+
+			<div id="graphic">
+				<div class="graphic">
+						<h4>Headline here graphic</h4>
+						<!-- LEAVE THIS PART ALONE...IT SETS UP THE NUMBERING AT THE TOP AUTOMATICALLY -->
+						<div class="tab-wrapper">
+						    <div id="panel_tabs" class="tab-nav"></div>
+						    <div class="tab-nav">
+						       <a id="next_panel" href="#">Next&nbsp;&raquo;</a>
+						    </div>
+						    <div class="clear"></div>
+						</div>
+
+						<div class="panel-line"></div>
+
+						<!-- PUT YOUR INFORMATION IN THIS SECTION. COPY THE WHOLE PANEL DIV IF YOU NEED TO ADD ANOTHER PANEL AND PASTE IT BELOW THE LAST PANEL IN THIS GROUP -->
+						<div id="panel_graphic">
+								<div class="panel">
+									<p class="body">Text here to explain the slide. And a little more just for fun.</p>
+									<img src="images/dow1.jpg" alt=""/>
+								</div>
+
+								<div class="panel">
+									<p class="body">And then tell how this slide is different from the last.</p>
+									<img src="images/dow2.jpg" alt=""/>
+								</div>
+
+								<div class="panel">
+									<p class="body">Tell us more here about what is going on in this slide.</p>
+									<img src="images/dow3.jpg" alt=""/>
+								</div>
+
+								<div class="panel">
+									<p class="body">Same thing here and here about this slide.</p>
+									<img src="images/dow4.jpg" alt=""/>
+								</div>
+						</div>
+				</div>
+			</div>
+
+			<script>
+
+			                if ($('#graphic').find('#panel_graphic').length > 0){
+                            $('#graphic').find('#panel_graphic').cycle({
+                                fx:     'fade',
+                                speed:  250,
+                                timeout:0,
+                                nowrap: true,
+                                next:   '#next_panel',
+                                pager:  '#panel_tabs'
+                            });
+                            $('#next_panel').click(function() {
+                                var num_panels = $(this).parent().siblings('#panel_tabs').find('a').length,
+                                    curr_idx = $(this).parent().siblings('#panel_tabs').find('.activeSlide').index();
+
+                                if (num_panels-1 == curr_idx) {
+                                    if ($(this).hasClass('last')) {
+                                        $(this).parent().siblings('#panel_tabs').find('a').first().click();
+                                        $(this).removeClass('last').html('Next&nbsp;&raquo;');
+                                    } else {
+                                        $(this).addClass('last').html('Start over');
+                                    }
+                                } else {
+                                    $(this).removeClass('last').html('Next&nbsp;&raquo;');
+                                }
+                            });
+
+                            $('#panel_tabs').children('a').click(function() {
+                                if ($(this).index() == $(this).parent().children('a').length-1) {
+                                    $('#next_panel').addClass('last').html('Start over');
+                                } else {
+                                    $('#next_panel').removeClass('last').html('Next&nbsp;&raquo;');
+                                }
+                            });
+                        }
+            </script>
+		<!-- END 1-2-3 PANEL GRAPHIC -->
+		</div>
+
+		<!-- ///////////////////////END SINGLE LAYER///////////////////////////-->
 
 
-
-<!-- //////////////////////END OF GRAPHIC TEMPLATE ELEMENTS: DO NOT DELETE ANYTHING BELOW HERE ///////////////////////// -->
+<!-- ////////////////////////////////////////////////////////END OF GRAPHIC TEMPLATE ELEMENTS ///////////////////////////////////////////////////////// -->
 
 
 	</div>
