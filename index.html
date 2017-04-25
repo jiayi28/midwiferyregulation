@@ -5,6 +5,8 @@
 		<title>Missourian Midwifery Regulation</title>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" / >
 		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script src="javascript.js" type="text/javascript"></script>
 		<!-- THESE ARE THE CSS FILES I ADDED -->
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 		<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
@@ -307,42 +309,6 @@
 				</div>
 			</div>
 
-			<script>
-
-			                if ($('#graphic').find('#panel_graphic').length > 0){
-                            $('#graphic').find('#panel_graphic').cycle({
-                                fx:     'fade',
-                                speed:  250,
-                                timeout:0,
-                                nowrap: true,
-                                next:   '#next_panel',
-                                pager:  '#panel_tabs'
-                            });
-                            $('#next_panel').click(function() {
-                                var num_panels = $(this).parent().siblings('#panel_tabs').find('a').length,
-                                    curr_idx = $(this).parent().siblings('#panel_tabs').find('.activeSlide').index();
-
-                                if (num_panels-1 == curr_idx) {
-                                    if ($(this).hasClass('last')) {
-                                        $(this).parent().siblings('#panel_tabs').find('a').first().click();
-                                        $(this).removeClass('last').html('Next&nbsp;&raquo;');
-                                    } else {
-                                        $(this).addClass('last').html('Start over');
-                                    }
-                                } else {
-                                    $(this).removeClass('last').html('Next&nbsp;&raquo;');
-                                }
-                            });
-
-                            $('#panel_tabs').children('a').click(function() {
-                                if ($(this).index() == $(this).parent().children('a').length-1) {
-                                    $('#next_panel').addClass('last').html('Start over');
-                                } else {
-                                    $('#next_panel').removeClass('last').html('Next&nbsp;&raquo;');
-                                }
-                            });
-                        }
-            </script>
 		<!-- END 1-2-3 PANEL GRAPHIC -->
 		</div>
 
